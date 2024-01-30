@@ -3,11 +3,11 @@ import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
 import { API, graphqlOperation } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
-import {listsickdemotables} from './graphql/queries';
-import { updatesickdemotable } from './graphql/mutations';
+import { listDemoprojtables } from './graphql/queries';
+import { updateDemoprojtable } from './graphql/mutations';
 
 const App = ({ signOut }) => {
-  const [sickdemoData, setsickdemoData] = useState([]);
+  const [demoprojData, setDemoprojData] = useState([]);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const [time, setTime] = useState(0);
   const [lastTime, setLastTime] = useState(0);
@@ -15,8 +15,8 @@ const App = ({ signOut }) => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   async function fetchData() {
-    const apiData = await API.graphql(graphqlOperation(listsickdemotables));
-    setsickdemoData(apiData.data.listsickdemotables.items);
+    const apiData = await API.graphql(graphqlOperation(listDemoprojtables));
+    setDemoprojData(apiData.data.listDemoprojtables.items);
   }
 
   const SixtyTrue = async () => {
@@ -25,7 +25,7 @@ const App = ({ signOut }) => {
       sixty: true,
       status: '3'
     };
-    await API.graphql(graphqlOperation(updatesickdemotable, { input }));
+    await API.graphql(graphqlOperation(updateDemoprojtable, { input }));
   }
 
   const SixtyFalse = async () => {
@@ -33,7 +33,7 @@ const App = ({ signOut }) => {
       id: '1',
       sixty: false
     };
-    await API.graphql(graphqlOperation(updatesickdemotable, { input }));
+    await API.graphql(graphqlOperation(updateDemoprojtable, { input }));
   }
 
   useEffect(() => {
@@ -58,13 +58,13 @@ const App = ({ signOut }) => {
   }, []);
 
   useEffect(() => {
-    const latestItem = sickdemoData[sickdemoData.length - 1];
+    const latestItem = demoprojData[demoprojData.length - 1];
     if (latestItem?.time === 'start') {
       setIsTimerRunning(true);
     } else if (latestItem?.time === 'stop') {
       setIsTimerRunning(false);
     }
-  }, [sickdemoData]);
+  }, [demoprojData]);
 
   useEffect(() => {
     if (time >= 60) {
@@ -72,7 +72,7 @@ const App = ({ signOut }) => {
     } else {
       SixtyFalse();
     }
-  }, [sickdemoData, time]);
+  }, [demoprojData, time]);
 
   function getStatusColor(status) {
     switch (status) {
@@ -130,7 +130,7 @@ const App = ({ signOut }) => {
           <div className="grid-header">Escalation SMS</div>
           <div className="grid-header">Response Time (Sec)</div>
           <div className="grid-header">Lane Losses (Sec)</div>
-          {sickdemoData.map((item, index) => (
+          {demoprojData.map((item, index) => (
             <React.Fragment key={index}>
               <div className="grid-cell" style={getStatusColor(item.status)}>
                 {`Take-away #${item.id} Pallet Build`}
