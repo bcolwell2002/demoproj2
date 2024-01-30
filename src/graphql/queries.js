@@ -1,9 +1,9 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getsickdemotable = /* GraphQL */ `
-  query Getsickdemotable($id: ID!) {
-    getsickdemotable(id: $id) {
+export const getDemoprojtable = /* GraphQL */ `
+  query GetDemoprojtable($id: ID!) {
+    getDemoprojtable(id: $id) {
       id
       running
       status
@@ -17,13 +17,13 @@ export const getsickdemotable = /* GraphQL */ `
     }
   }
 `;
-export const listsickdemotables = /* GraphQL */ `
-  query Listsickdemotables(
-    $filter: ModelsickdemotableFilterInput
+export const listDemoprojtables = /* GraphQL */ `
+  query ListDemoprojtables(
+    $filter: ModelDemoprojtableFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listsickdemotables(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listDemoprojtables(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         running
