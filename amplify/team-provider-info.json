@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-demoproj2-dev-153953-authRole",
+      "UnauthRoleArn": "arn:aws:iam::525732877347:role/amplify-demoproj2-dev-153953-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::525732877347:role/amplify-demoproj2-dev-153953-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-demoproj2-dev-153953-deployment",
+      "UnauthRoleName": "amplify-demoproj2-dev-153953-unauthRole",
+      "StackName": "amplify-demoproj2-dev-153953",
+      "StackId": "arn:aws:cloudformation:us-east-1:525732877347:stack/amplify-demoproj2-dev-153953/3923f270-c20b-11ee-a667-0e02eff3a963",
+      "AmplifyAppId": "dihtjzzwamwrt"
+    },
+    "categories": {
+      "api": {
+        "demoproj2": {}
+      },
+      "auth": {
+        "demoproj2eca733af": {}
+      }
+    }
+  }
+}

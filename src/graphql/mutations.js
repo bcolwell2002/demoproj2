@@ -1,59 +1,47 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createDemoprojtable = /* GraphQL */ `
-  mutation CreateDemoprojtable(
-    $input: CreateDemoprojtableInput!
-    $condition: ModelDemoprojtableConditionInput
+export const createTodo = /* GraphQL */ `
+  mutation CreateTodo(
+    $input: CreateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    createDemoprojtable(input: $input, condition: $condition) {
+    createTodo(input: $input, condition: $condition) {
       id
-      running
-      status
-      sms
-      sixty
-      time
-      timeplus
-      updatedAt
+      name
+      description
       createdAt
+      updatedAt
       __typename
     }
   }
 `;
-export const updateDemoprojtable = /* GraphQL */ `
-  mutation UpdateDemoprojtable(
-    $input: UpdateDemoprojtableInput!
-    $condition: ModelDemoprojtableConditionInput
+export const updateTodo = /* GraphQL */ `
+  mutation UpdateTodo(
+    $input: UpdateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    updateDemoprojtable(input: $input, condition: $condition) {
+    updateTodo(input: $input, condition: $condition) {
       id
-      running
-      status
-      sms
-      sixty
-      time
-      timeplus
-      updatedAt
+      name
+      description
       createdAt
+      updatedAt
       __typename
     }
   }
 `;
-export const deleteDemoprojtable = /* GraphQL */ `
-  mutation DeleteDemoprojtable(
-    $input: DeleteDemoprojtableInput!
-    $condition: ModelDemoprojtableConditionInput
+export const deleteTodo = /* GraphQL */ `
+  mutation DeleteTodo(
+    $input: DeleteTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    deleteDemoprojtable(input: $input, condition: $condition) {
+    deleteTodo(input: $input, condition: $condition) {
       id
-      running
-      status
-      sms
-      sixty
-      time
-      timeplus
-      updatedAt
+      name
+      description
       createdAt
+      updatedAt
       __typename
     }
   }
