@@ -6,40 +6,32 @@ import { LazyLoading, LazyLoadingDisabled } from "@aws-amplify/datastore";
 
 
 
-type Eagerdemoprojtable = {
+type EagerTodo = {
   readonly [__modelMeta__]: {
-    identifier: ManagedIdentifier<demoprojtable, 'id'>;
+    identifier: ManagedIdentifier<Todo, 'id'>;
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly running?: boolean | null;
-  readonly status?: number | null;
-  readonly sms?: boolean | null;
-  readonly sixty?: boolean | null;
-  readonly time?: string | null;
-  readonly timeplus?: string | null;
+  readonly name: string;
+  readonly description?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
 
-type Lazydemoprojtable = {
+type LazyTodo = {
   readonly [__modelMeta__]: {
-    identifier: ManagedIdentifier<demoprojtable, 'id'>;
+    identifier: ManagedIdentifier<Todo, 'id'>;
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly running?: boolean | null;
-  readonly status?: number | null;
-  readonly sms?: boolean | null;
-  readonly sixty?: boolean | null;
-  readonly time?: string | null;
-  readonly timeplus?: string | null;
+  readonly name: string;
+  readonly description?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
 
-export declare type demoprojtable = LazyLoading extends LazyLoadingDisabled ? Eagerdemoprojtable : Lazydemoprojtable
+export declare type Todo = LazyLoading extends LazyLoadingDisabled ? EagerTodo : LazyTodo
 
-export declare const demoprojtable: (new (init: ModelInit<demoprojtable>) => demoprojtable) & {
-  copyOf(source: demoprojtable, mutator: (draft: MutableModel<demoprojtable>) => MutableModel<demoprojtable> | void): demoprojtable;
+export declare const Todo: (new (init: ModelInit<Todo>) => Todo) & {
+  copyOf(source: Todo, mutator: (draft: MutableModel<Todo>) => MutableModel<Todo> | void): Todo;
 }

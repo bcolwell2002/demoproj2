@@ -4,8 +4,8 @@ import { schema } from './schema';
 
 
 
-const { demoprojtable } = initSchema(schema);
+const { Todo } = initSchema(schema);
 
 export {
-  demoprojtable
+  Todo
 };

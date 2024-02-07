@@ -1,7 +1,7 @@
 export const schema = {
     "models": {
-        "demoprojtable": {
-            "name": "demoprojtable",
+        "Todo": {
+            "name": "Todo",
             "fields": {
                 "id": {
                     "name": "id",
@@ -10,43 +10,15 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "running": {
-                    "name": "running",
-                    "isArray": false,
-                    "type": "Boolean",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "status": {
-                    "name": "status",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "sms": {
-                    "name": "sms",
-                    "isArray": false,
-                    "type": "Boolean",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "sixty": {
-                    "name": "sixty",
-                    "isArray": false,
-                    "type": "Boolean",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "time": {
-                    "name": "time",
+                "name": {
+                    "name": "name",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
-                "timeplus": {
-                    "name": "timeplus",
+                "description": {
+                    "name": "description",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -70,7 +42,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "demoprojtables",
+            "pluralName": "Todos",
             "attributes": [
                 {
                     "type": "model",
@@ -82,5 +54,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "623cbfc6c8eee29d16ec5ac7d90e6079"
+    "version": "4401034582a70c60713e1f7f9da3b752"
 };
