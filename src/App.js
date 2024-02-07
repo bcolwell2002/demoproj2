@@ -31,7 +31,7 @@ const App = ({ signOut }) => {
   const SixtyFalse = async () => {
     const input = {
       id: '1',
-      sixty: false
+      sixty: falsees
     };
     await API.graphql(graphqlOperation(updateDemoprojtable, { input }));
   }
